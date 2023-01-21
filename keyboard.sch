@@ -247,9 +247,9 @@ GPIO26_ADC0
 Text Label 12550 5650 2    50   ~ 0
 GPIO27_ADC1
 Text Label 12550 5750 2    50   ~ 0
-GPIO28_ADC2
+I2C_SDA
 Text Label 12550 5850 2    50   ~ 0
-GPIO29_ADC3
+I2C_SCL
 Text Label 8900 2900 0    50   ~ 0
 QSPI_SS
 Text Label 8900 3500 0    50   ~ 0
@@ -383,18 +383,10 @@ Wire Wire Line
 	20200 1650 19700 1650
 Wire Wire Line
 	20200 1550 19700 1550
-Wire Wire Line
-	20200 1450 19700 1450
-Wire Wire Line
-	20200 1350 19700 1350
 Text Label 19700 1650 0    50   ~ 0
 GPIO26_ADC0
 Text Label 19700 1550 0    50   ~ 0
 GPIO27_ADC1
-Text Label 19700 1450 0    50   ~ 0
-GPIO28_ADC2
-Text Label 19700 1350 0    50   ~ 0
-GPIO29_ADC3
 Wire Wire Line
 	9450 4950 8900 4950
 Text Label 8900 4950 0    50   ~ 0
@@ -804,12 +796,12 @@ $EndComp
 $Comp
 L power:VBUS #PWR03
 U 1 1 5F069FC0
-P 1900 1100
-F 0 "#PWR03" H 1900 950 50  0001 C CNN
-F 1 "VBUS" H 1915 1273 50  0000 C CNN
-F 2 "" H 1900 1100 50  0001 C CNN
-F 3 "" H 1900 1100 50  0001 C CNN
-	1    1900 1100
+P 2150 1100
+F 0 "#PWR03" H 2150 950 50  0001 C CNN
+F 1 "VBUS" H 2165 1273 50  0000 C CNN
+F 2 "" H 2150 1100 50  0001 C CNN
+F 3 "" H 2150 1100 50  0001 C CNN
+	1    2150 1100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -903,14 +895,6 @@ Wire Wire Line
 	1250 3350 1300 3350
 Wire Wire Line
 	1300 3350 1300 3400
-Wire Wire Line
-	1600 1150 1900 1150
-Connection ~ 2300 1150
-Wire Wire Line
-	1900 1100 1900 1150
-Connection ~ 1900 1150
-Wire Wire Line
-	1900 1150 2300 1150
 Wire Wire Line
 	12200 2250 12400 2250
 Text Label 13250 2250 2    50   ~ 0
@@ -3572,53 +3556,53 @@ Text GLabel 3950 7500 0    50   Input ~ 0
 col0
 Text GLabel 3050 8250 0    50   Input ~ 0
 row0
-Text GLabel 18450 1450 0    50   Input ~ 0
+Text GLabel 18450 2850 0    50   Input ~ 0
 col0
-Text GLabel 18450 1550 0    50   Input ~ 0
+Text GLabel 18450 2750 0    50   Input ~ 0
 col1
-Text GLabel 18450 1650 0    50   Input ~ 0
+Text GLabel 18450 2650 0    50   Input ~ 0
 col2
-Text GLabel 18450 1750 0    50   Input ~ 0
+Text GLabel 18450 2550 0    50   Input ~ 0
 col3
-Text GLabel 18450 1850 0    50   Input ~ 0
+Text GLabel 18450 2450 0    50   Input ~ 0
 col4
-Text GLabel 18450 1950 0    50   Input ~ 0
+Text GLabel 18450 2350 0    50   Input ~ 0
 col5
-Text GLabel 18450 2050 0    50   Input ~ 0
+Text GLabel 18450 2250 0    50   Input ~ 0
 col6
 Text GLabel 18450 2150 0    50   Input ~ 0
 col7
-Text GLabel 18450 2250 0    50   Input ~ 0
+Text GLabel 18450 2050 0    50   Input ~ 0
 col8
-Text GLabel 18450 2350 0    50   Input ~ 0
+Text GLabel 18450 1450 0    50   Input ~ 0
 col9
-Text GLabel 20200 2150 2    50   Input ~ 0
+Text GLabel 18450 1550 0    50   Input ~ 0
 col10
-Text GLabel 20200 2250 2    50   Input ~ 0
+Text GLabel 18450 1650 0    50   Input ~ 0
 col11
-Text GLabel 20200 2350 2    50   Input ~ 0
+Text GLabel 18450 1750 0    50   Input ~ 0
 col12
-Text GLabel 20200 2450 2    50   Input ~ 0
+Text GLabel 18450 1850 0    50   Input ~ 0
 col13
-Text GLabel 20200 2550 2    50   Input ~ 0
+Text GLabel 18450 1950 0    50   Input ~ 0
 col14
-Text GLabel 20200 1350 2    50   Input ~ 0
+Text GLabel 18450 2950 0    50   Input ~ 0
 col15
-Text GLabel 20200 1550 2    50   Input ~ 0
-col16
-Text GLabel 20200 1850 2    50   Input ~ 0
-col17
-Text GLabel 20200 1950 2    50   Input ~ 0
-row0
-Text GLabel 20200 2050 2    50   Input ~ 0
-row1
-Text GLabel 20200 1750 2    50   Input ~ 0
-row2
 Text GLabel 20200 2650 2    50   Input ~ 0
+col16
+Text GLabel 20200 2550 2    50   Input ~ 0
+col17
+Text GLabel 20200 2450 2    50   Input ~ 0
+row0
+Text GLabel 20200 2350 2    50   Input ~ 0
+row1
+Text GLabel 20200 2250 2    50   Input ~ 0
+row2
+Text GLabel 20200 2150 2    50   Input ~ 0
 row3
-Text GLabel 20200 1650 2    50   Input ~ 0
+Text GLabel 20200 2050 2    50   Input ~ 0
 row4
-Text GLabel 20200 1450 2    50   Input ~ 0
+Text GLabel 20200 1950 2    50   Input ~ 0
 row5
 Wire Wire Line
 	7500 10250 8500 10250
@@ -3930,7 +3914,273 @@ F 3 "" H 5550 7850 60  0000 C CNN
 	1    5550 7850
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9900 2150
-NoConn ~ 10000 2150
-NoConn ~ 10200 2150
+$Comp
+L MCU_RaspberryPi_RP2040:MDJ-006-FS J3
+U 1 1 63CFDB62
+P 2050 4750
+F 0 "J3" H 2050 5117 50  0000 C CNN
+F 1 "Mini-DIN-6" H 2050 5026 50  0000 C CNN
+F 2 "RP2040_minimal:MJD-006-FS" H 2050 4750 50  0001 C CNN
+F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 2050 4750 50  0001 C CNN
+	1    2050 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x07 J4
+U 1 1 64055698
+P 5300 6000
+F 0 "J4" V 5425 5996 50  0000 C CNN
+F 1 "Breakout" V 5516 5996 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 5300 6000 50  0001 C CNN
+F 3 "~" H 5300 6000 50  0001 C CNN
+	1    5300 6000
+	0    1    1    0   
+$EndComp
+Text Label 5050 4850 1    50   ~ 0
++3V3
+Text Label 5200 5000 1    50   ~ 0
+VBUS
+Text Label 5000 5300 3    50   ~ 0
+GND
+Text Label 5600 5300 3    50   ~ 0
+GPIO24
+Text Label 5500 5300 3    50   ~ 0
+GPIO25
+Text Label 5400 5300 3    50   ~ 0
+GPIO26_ADC0
+Text Label 5300 5300 3    50   ~ 0
+GPIO27_ADC1
+Wire Wire Line
+	5600 5300 5600 5800
+Wire Wire Line
+	5500 5300 5500 5800
+Wire Wire Line
+	5400 5300 5400 5800
+Wire Wire Line
+	5300 5300 5300 5800
+Wire Wire Line
+	5200 5300 5200 5800
+Wire Wire Line
+	5000 5300 5000 5800
+Text Label 2850 4850 2    50   ~ 0
+GPIO24
+Text Label 2850 4650 2    50   ~ 0
+GPIO25
+Text Label 2850 4750 2    50   ~ 0
+GND
+Text Label 900  4750 2    50   ~ 0
+VBUS
+Text Label 1250 4650 0    50   ~ 0
+GPIO26_ADC0
+Text Label 1250 4850 0    50   ~ 0
+GPIO27_ADC1
+Wire Wire Line
+	1250 4850 1750 4850
+Wire Wire Line
+	1250 4650 1750 4650
+Wire Wire Line
+	2350 4850 2850 4850
+Wire Wire Line
+	2350 4750 2850 4750
+Wire Wire Line
+	2350 4650 2850 4650
+$Comp
+L Device:C_Small C6
+U 1 1 63D1EA22
+P 9400 1350
+F 0 "C6" H 9492 1396 50  0000 L CNN
+F 1 "100n" H 9492 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9400 1350 50  0001 C CNN
+F 3 "~" H 9400 1350 50  0001 C CNN
+	1    9400 1350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 63D747E2
+P 9650 1350
+F 0 "C7" H 9742 1396 50  0000 L CNN
+F 1 "100n" H 9742 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9650 1350 50  0001 C CNN
+F 3 "~" H 9650 1350 50  0001 C CNN
+	1    9650 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 63DCAC75
+P 9400 1650
+F 0 "#PWR0101" H 9400 1400 50  0001 C CNN
+F 1 "GND" H 9405 1477 50  0000 C CNN
+F 2 "" H 9400 1650 50  0001 C CNN
+F 3 "" H 9400 1650 50  0001 C CNN
+	1    9400 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V1 #PWR0102
+U 1 1 63DCD50A
+P 10050 1150
+F 0 "#PWR0102" H 10050 1000 50  0001 C CNN
+F 1 "+1V1" H 10065 1323 50  0000 C CNN
+F 2 "" H 10050 1150 50  0001 C CNN
+F 3 "" H 10050 1150 50  0001 C CNN
+	1    10050 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 2150 10200 1800
+Wire Wire Line
+	10200 1200 10050 1200
+Wire Wire Line
+	9400 1200 9400 1250
+Wire Wire Line
+	9650 1250 9650 1200
+Connection ~ 9650 1200
+Wire Wire Line
+	9650 1200 9400 1200
+Wire Wire Line
+	10050 1200 10050 1150
+Connection ~ 10050 1200
+Wire Wire Line
+	10050 1200 9650 1200
+Wire Wire Line
+	10200 1800 10000 1800
+Wire Wire Line
+	9900 1800 9900 2150
+Connection ~ 10200 1800
+Wire Wire Line
+	10200 1800 10200 1200
+Wire Wire Line
+	10000 2150 10000 1800
+Connection ~ 10000 1800
+Wire Wire Line
+	10000 1800 9900 1800
+Wire Wire Line
+	9650 1450 9650 1550
+Wire Wire Line
+	9650 1550 9400 1550
+Wire Wire Line
+	9400 1550 9400 1650
+Wire Wire Line
+	9400 1450 9400 1550
+Connection ~ 9400 1550
+$Comp
+L Device:C_Small C8
+U 1 1 6403B0BF
+P 8900 1900
+F 0 "C8" H 8992 1946 50  0000 L CNN
+F 1 "1u" H 8992 1855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8900 1900 50  0001 C CNN
+F 3 "~" H 8900 1900 50  0001 C CNN
+	1    8900 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 1800 8900 1200
+Wire Wire Line
+	8900 1200 9400 1200
+Connection ~ 9400 1200
+$Comp
+L power:GND #PWR0103
+U 1 1 640971CB
+P 8900 2100
+F 0 "#PWR0103" H 8900 1850 50  0001 C CNN
+F 1 "GND" H 8905 1927 50  0000 C CNN
+F 2 "" H 8900 2100 50  0001 C CNN
+F 3 "" H 8900 2100 50  0001 C CNN
+	1    8900 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 2000 8900 2100
+$Comp
+L Diode:1N4148W D88
+U 1 1 6418BE1E
+P 1850 1150
+F 0 "D88" H 1850 1367 50  0000 C CNN
+F 1 "1N4148W" H 1850 1276 50  0000 C CNN
+F 2 "Diode_SMD:D_0402_1005Metric" H 1850 975 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 1850 1150 50  0001 C CNN
+	1    1850 1150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1150 1700 1150
+Wire Wire Line
+	2000 1150 2150 1150
+Connection ~ 2300 1150
+Wire Wire Line
+	2150 1150 2150 1100
+Connection ~ 2150 1150
+Wire Wire Line
+	2150 1150 2300 1150
+$Comp
+L Diode:1N4148W D89
+U 1 1 642FB92E
+P 5200 5150
+F 0 "D89" V 5154 5070 50  0000 R CNN
+F 1 "1N4148W" V 5245 5070 50  0000 R CNN
+F 2 "Diode_SMD:D_0402_1005Metric" H 5200 4975 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 5200 5150 50  0001 C CNN
+	1    5200 5150
+	0    -1   1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D90
+U 1 1 642FCF45
+P 5050 5000
+F 0 "D90" V 5100 4800 50  0000 L CNN
+F 1 "1N4148W" V 5000 4600 50  0000 L CNN
+F 2 "Diode_SMD:D_0402_1005Metric" H 5050 4825 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 5050 5000 50  0001 C CNN
+	1    5050 5000
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5100 5250 5050 5250
+Wire Wire Line
+	5050 5250 5050 5150
+$Comp
+L Diode:1N4148W D91
+U 1 1 644FA92A
+P 1050 4750
+F 0 "D91" H 1050 4533 50  0000 C CNN
+F 1 "1N4148W" H 1050 4624 50  0000 C CNN
+F 2 "Diode_SMD:D_0402_1005Metric" H 1050 4575 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 1050 4750 50  0001 C CNN
+	1    1050 4750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1200 4750 1750 4750
+Wire Wire Line
+	5100 5250 5100 5800
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 64692833
+P 2150 5900
+F 0 "J5" H 2068 5475 50  0000 C CNN
+F 1 "I2C_Display_Header" H 2068 5566 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 2150 5900 50  0001 C CNN
+F 3 "~" H 2150 5900 50  0001 C CNN
+	1    2150 5900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2350 6000 2950 6000
+Wire Wire Line
+	2350 5700 2950 5700
+Wire Wire Line
+	2350 5800 2950 5800
+Wire Wire Line
+	2350 5900 2950 5900
+Text Label 2950 6000 2    50   ~ 0
+GND
+Text Label 2950 5800 2    50   ~ 0
+VBUS
+Text Label 2950 5700 2    50   ~ 0
+I2C_SCL
+Text Label 2950 5900 2    50   ~ 0
+I2C_SDA
 $EndSCHEMATC
